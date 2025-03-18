@@ -1,0 +1,66 @@
+:root{
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --container-bg: white;
+    --button-bg:#007BFF;
+    --button-hover: #0056b3;
+
+}
+.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #f1f1f1;
+    --container-bg: #333;
+    --button-bg: #4CAF50;
+    --button-hover: #45a049;
+}
+
+body{
+    text-align: center;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin:0;
+    padding: 20px;
+    transition: all 0.3 ease-in-out;
+}
+
+.container{
+    max-width: 90vw;
+    width: 900px;
+    height: 600px;
+    max-height: 65vh;
+    background: var(--container-bg);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+
+h1, h2 {
+    color: var(--text-color);
+}
+
+.moodSelector{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+select, button {
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    background: var(--button-bg);
+    color: white;
+    border: none;
+}
+
+button:hover {
+    background: var(--button-hover);
+}
+
