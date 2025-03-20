@@ -1,49 +1,72 @@
-:root{
-    --bg-color: #f4f4f4;
-    --text-color: #333;
-    --container-bg: white;
-    --button-bg:#007BFF;
-    --button-hover: #0056b3;
-
+:root {
+  --bg-color: #f4f4f4;
+  --text-color: #333;
+  --container-bg: white;
+  --button-bg: #007bff;
+  --button-hover: #0056b3;
 }
 .dark-mode {
-    --bg-color: #1e1e1e;
-    --text-color: #f1f1f1;
-    --container-bg: #333;
-    --button-bg: #4CAF50;
-    --button-hover: #45a049;
+  --bg-color: #1e1e1e;
+  --text-color: #f1f1f1;
+  --container-bg: #333;
+  --button-bg: #4caf50;
+  --button-hover: #45a049;
 }
 
-body{
-    text-align: center;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin:0;
-    padding: 20px;
-    transition: all 0.3 ease-in-out;
+body {
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 20px;
+  transition: all 0.3 ease-in-out;
 }
 
-.container{
-    max-width: 90vw;
-    width: 900px;
-    height: 600px;
-    max-height: 65vh;
-    background: var(--container-bg);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin: auto;
+.container {
+  max-width: 90vw;
+  width: 900px;
+  height: 600px;
+  max-height: 65vh;
+  background: var(--container-bg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: auto;
 }
 
+h1,
+h2 {
+  color: var(--text-color);
+}
 
-h1, h2 {
-    color: var(--text-color);
+.moodSelector {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+select,
+button {
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+button {
+  cursor: pointer;
+  background: var(--button-bg);
+  color: white;
+  border: none;
+}
+
+button:hover {
+  background: var(--button-hover);
 }
 
 .moodSelector{
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 20px;
+
 }
 
 select, button {
@@ -53,6 +76,7 @@ select, button {
     border-radius: 5px;
 }
 
+/* Save Mood Button */
 button {
     cursor: pointer;
     background: var(--button-bg);
@@ -64,3 +88,43 @@ button:hover {
     background: var(--button-hover);
 }
 
+/* Dark Mode Toggle Button */
+#toggleDarkMode {
+    background: var(--button-bg);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#toggleDarkMode:hover {
+    background: var(--button-hover);
+}
+
+/* Mood List Styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 10px;
+    background: var(--button-bg);
+    color: white;
+    margin: 5px;
+    border-radius: 5px;
+}
+/* responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    select, button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
